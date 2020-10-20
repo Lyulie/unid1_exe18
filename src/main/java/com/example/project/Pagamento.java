@@ -1,6 +1,6 @@
 package com.example.project;
 
-import java.util.Set;
+import java.util.ArrayList;
 
 public class Pagamento {
     public static final String DINHEIRO = "Dinheiro";
@@ -10,6 +10,14 @@ public class Pagamento {
     private String formaPagamento;
     private double valorCompra;
     private double valorPago;
+
+    public static ArrayList<String> gerarArrayList(String ...itens) {
+        ArrayList<String> arrayItens = new ArrayList<>();
+        for(String item : itens){
+            arrayItens.add(item);
+        }
+        return arrayItens;
+    }
     
     public Pagamento(
         String formaPagamento, 
@@ -45,7 +53,7 @@ public class Pagamento {
     }
 
     public void validarPagamento(){
-        Set<String> formasPagamento = Set.of(DINHEIRO, CARTAO_DEBITO, CARTAO_CREDITO);
+        ArrayList<String> formasPagamento = gerarArrayList(DINHEIRO, CARTAO_DEBITO, CARTAO_CREDITO);
         
         if (this.formaPagamento.equalsIgnoreCase(DINHEIRO) && this.valorPago < this.valorCompra) {
             throw new RuntimeException("Valor de pagamento incompatível com o pedido.");

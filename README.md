@@ -1,6 +1,7 @@
 # Unidade 1 - Exercício 18 - Java
 Exercício 18
 Por fim, o cupom mostra o código do operador que está cadastrando a venda (494715) e dá detalhes da Impressora fiscal: modelo (SWEDA IF ST200), versão do ECF-IF (01.00.05) e ECF (067) e número serial (SW031300000000045629).
+
 Você criaria uma ou mais classes para representar esses conceitos? Ou utilizaria atributos e métodos em Venda para implementá-los?
 Atualize o código para gerar o seguinte texto de cupom fiscal:
 
